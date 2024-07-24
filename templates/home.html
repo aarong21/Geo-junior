@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+    background-color: #84a2b6;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-top: 50px;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.2); /* Similar 3D effect */
+}
+
+.button-container {
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient to match submit buttons */
+    border-radius: 30px; /* Rounded corners like submit buttons */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-image: linear-gradient(to right, #feb47b, #ff7e5f); /* Inverted gradient on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+    transform: translateY(-2px); /* Slightly raise the button */
+}
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to GeoJunior, {{username}}!</h1>
+
+    <div class="button-container">
+        <a href="{{ url_for('quizzes') }}" class="button">Quizzes</a>
+        <a href="{{ url_for('study') }}" class="button">Study</a>
+        <a href="{{ url_for('profile') }}" class="button">Profile</a>
+    </div>
+</body>
+
+</html>
